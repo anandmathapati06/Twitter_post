@@ -1,7 +1,7 @@
 
 import { postTweet } from './twitter.js'
 import {CronJob} from 'cron'
-const app = express()
+
 import dotenv from 'dotenv'
 import { mongoModel ,DBconnection } from './mongodb.js'
 dotenv.config()
