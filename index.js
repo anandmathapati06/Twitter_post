@@ -1,7 +1,7 @@
-
+import express from 'express'
 import { postTweet } from './twitter.js'
 import {CronJob} from 'cron'
-
+const app = express()
 import dotenv from 'dotenv'
 import { mongoModel ,DBconnection } from './mongodb.js'
 dotenv.config()
@@ -36,7 +36,9 @@ const job = new CronJob('* * * * * *',() =>{i = example(i,con)},null,true)
   
     
 
-
+app.listen(8888,()=>{
+    console.log("message from server");
+})
 
 
 
